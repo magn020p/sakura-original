@@ -4,15 +4,34 @@ import SoMe from "../components/SoMe.astro";
 ---
 
 <ul id="navmenu">
-  <Navbutton label="Home" path="index.html" />
-  <Navbutton label="Programme" path="culy.netlyfi.app/program.html" />
-  <Navbutton label="Map / booths" path="culy.netlyfi.app/mapbooths.html" />
-  <Navbutton label="About" path="culy.netlyfi.app/about.html" />
-  <Navbutton label="Contact" path="culy.netlyfi.app/contact.html" />
+  <Navbutton
+    label="Home"
+    path="https://shimmering-custard-09776a.netlify.app/"
+  />
+  <Navbutton
+    label="Programme"
+    path="https://shimmering-custard-09776a.netlify.app/programme/"
+  />
+  <Navbutton
+    label="Map / booths"
+    path="https://shimmering-custard-09776a.netlify.app/mapbooths/"
+  />
+  <Navbutton
+    label="About"
+    path="https://shimmering-custard-09776a.netlify.app/about/"
+  />
+  <Navbutton
+    label="Contact"
+    path="https://shimmering-custard-09776a.netlify.app/contact/"
+  />
   <li id="somemobilerow">
     <SoMe />
   </li>
 </ul>
+<li id="somemobilerow">
+  <SoMe />
+</li>
+
 <style>
   @media screen and (min-width: 1025px) {
     ul {
