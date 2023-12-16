@@ -85,30 +85,29 @@ import Thatsall from "../components/Thatsall.astro";
     </footer>
 
     <script type="module">
-      alert("hej");
-      /* document.getElementById("programme.html").style.backgroundColor =
-      "var(--nav-bg-current)";
-    // document.getElementById("programme.html").firstChild.style.color =
-    //   "var(--nav-currentwhite)";
+      document.getElementById("programme.html").style.backgroundColor =
+        "var(--nav-bg-current)";
+      // document.getElementById("programme.html").firstChild.style.color =
+      //   "var(--nav-currentwhite)";
 
-    // DATABASE INTEGRATION
-    // I don't think this is the most optimal way to implement the database using components, but it is the only one I could fiure out how to implement.
+      // DATABASE INTEGRATION
+      // I don't think this is the most optimal way to implement the database using components, but it is the only one I could fiure out how to implement.
 
-    console.log("Elba Gordipsum");
+      console.log("Elba Gordipsum");
 
-    fetch("https://emil42x2-7cd5.restdb.io/rest/programme", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "x-apikey": "64750032e3b58f2cb4300c83",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        let output = '<ul class="richlist" id="listoutput">';
-        console.log(data);
-        data.forEach(function (programme) {
-          output += `
+      fetch("https://emil42x2-7cd5.restdb.io/rest/programme", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": "64750032e3b58f2cb4300c83",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          let output = '<ul class="richlist" id="listoutput">';
+          console.log(data);
+          data.forEach(function (programme) {
+            output += `
           <li class="richlistitem">
             <div class="richlistimgcont">
               <img src=${programme.imagepath} />
@@ -145,11 +144,11 @@ import Thatsall from "../components/Thatsall.astro";
             </div>
           </li>
           `;
-        });
-        output += "</ul>";
-        document.getElementById("listoutput").innerHTML = output;
-      })
-      .catch((err) => console.log(err)); */
+          });
+          output += "</ul>";
+          document.getElementById("listoutput").innerHTML = output;
+        })
+        .catch((err) => console.log(err));
     </script>
   </body>
 </html>
