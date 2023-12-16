@@ -695,11 +695,11 @@ import Footercomptree from "../components/Footercomptree.astro";
     <footer>
       <Footercomptree />
     </footer>
+    <script>
+      document.getElementById("contact").style.backgroundColor =
+        "var(--nav-bg-current)";
+      document.getElementById("contact").firstChild.style.color =
+        "var(--nav-currentwhite)";
+    </script>
   </body>
-  <script>
-    document.getElementById("contact.html").style.backgroundColor =
-      "var(--nav-bg-current)";
-    document.getElementById("contact.html").firstChild.style.color =
-      "var(--nav-currentwhite)";
-  </script>
 </html>

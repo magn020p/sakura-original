@@ -4,19 +4,34 @@ import Navbutton from "../components/Navbutton.astro";
 
 <ul id="navbar">
   <li>
-    <a href="https://shimmering-custard-09776a.netlify.app/">Home 1</a>
+    <a id="home" href="https://shimmering-custard-09776a.netlify.app/">Home 1</a
+    >
   </li>
   <li>
-    <a href="https://shimmering-custard-09776a.netlify.app/programme/"
+    <a
+      id="programme"
+      href="https://shimmering-custard-09776a.netlify.app/programme/"
       >Programme 1</a
     >
   </li>
-  <Navbutton label="Home" path="index.html" />
-
-  <Navbutton label="Programme" path="programme.html" />
-  <Navbutton label="Map / booths" path="mapbooths.html" />
-  <Navbutton label="About" path="about.html" />
-  <Navbutton label="Contact" path="contact.html" />
+  <li>
+    <a
+      id="mapbooths"
+      href="https://shimmering-custard-09776a.netlify.app/mapbooths/"
+      >Map and booths</a
+    >
+  </li>
+  <li>
+    <a id="about" href="https://shimmering-custard-09776a.netlify.app/about/"
+      >About</a
+    >
+  </li>
+  <li>
+    <a
+      id="contact"
+      href="https://shimmering-custard-09776a.netlify.app/contact/">Contact</a
+    >
+  </li>
 </ul>
 
 <style>
@@ -30,5 +45,62 @@ import Navbutton from "../components/Navbutton.astro";
     /* background: #fff; */
     padding: 0;
     margin: 0;
+  }
+  li {
+    display: flex;
+    height: 100%;
+    border-radius: var(--br-5);
+    border: none;
+    background-color: initial;
+    font-weight: var(--navbutton-desk-font-weight);
+    font-size: var(----navbutton-desk-font-size);
+    text-transform: var(--navbutton-desk-text-case);
+    transition: var(--standard-transition);
+  }
+
+  li:target {
+    background-color: var(--nav-bg-current);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    align-content: center;
+    padding: 0 1em;
+    text-decoration: var(--navbutton-desk-text-decoration);
+    color: var(--nav-text);
+  }
+
+  li:hover {
+    background-color: var(--nav-bg-hovered);
+    scale: var(--hoverskala);
+  }
+
+  li:active {
+    background-color: var(--nav-bg-current);
+    color: var(--white-text);
+    scale: var(--activeskala);
+  }
+
+  @media screen and (max-width: 1024px) {
+    li {
+      /* display: flex; */
+      /* width: 100%; */
+      /* border: 1px solid black; */
+      font-weight: var(--navbutton-mobile-font-weight);
+      font-size: var(----navbutton-mobile-font-size);
+      text-transform: var(--navbutton-mobile-text-case);
+      transition: var(--standard-transition);
+    }
+    a {
+      /* display: flex; */
+      /* border: 1px solid red; */
+      width: 100%;
+      justify-content: right;
+      padding: 0 var(--spacing-normal);
+      text-decoration: var(--navbutton-mobile-text-decoration);
+      color: var(--nav-text);
+    }
   }
 </style>

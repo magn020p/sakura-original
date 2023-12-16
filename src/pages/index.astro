@@ -161,11 +161,11 @@ import Textbutton from "../components/Textbutton.astro";
     <footer>
       <Footercomp />
     </footer>
+    <script>
+      document.getElementById("home").style.backgroundColor =
+        "var(--nav-bg-current)";
+      document.getElementById("home").firstChild.style.color =
+        "var(--nav-currentwhite)";
+    </script>
   </body>
-  <script>
-    document.getElementById("index.html").style.backgroundColor =
-      "var(--nav-bg-current)";
-    document.getElementById("index.html").firstChild.style.color =
-      "var(--nav-currentwhite)";
-  </script>
 </html>
